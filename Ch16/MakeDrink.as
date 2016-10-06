@@ -1,0 +1,16 @@
+﻿class MakeDrink extends DrinkTempProcess {
+	//properties...
+	var solid:String;
+	//constructor...
+	function MakeDrink(arg_liquid:String, arg_froth:Boolean, arg_solid:String, arg_temperature:Number) {
+		//pass to superclass...
+		super(arg_liquid, arg_froth, arg_temperature);
+		//create here...
+		solid = arg_solid;
+	}
+	//methods...
+	function makeIt():String {
+		return processIngredients(liquid, temperature)+" and mixed in "+solid;
+	}
+}
+
